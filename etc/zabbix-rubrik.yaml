@@ -1,0 +1,10 @@
+zabbix:
+  server: '192.168.0.20'
+  port: '10051'
+  host_name: 'my-rubrik'
+
+rubrik:
+  - region-eu-central-1:
+      node: 'rubrik-node.eu-central-1.local'
+      api_token : 'xxxxxxxxxxxxxxxxxxxxx'
+

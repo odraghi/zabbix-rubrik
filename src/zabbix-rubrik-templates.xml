@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2022-11-09T17:06:14Z</date>
+    <groups>
+        <group>
+            <name>Templates/Rubrik</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template Appliance Rubrik</template>
+            <name>Template Appliance Rubrik</name>
+            <groups>
+                <group>
+                    <name>Templates/Rubrik</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Rubrik</name>
+                </application>
+            </applications>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Rubrik Appliances Stats</name>
+                    <key>rubrik.discover.sites</key>
+                    <delay>5m</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Rubrik Statistics Runaway Remaining on {#RUBRIKSITE}</name>
+                            <type>TRAP</type>
+                            <key>rubrik.stats.runway_remaining[{#RUBRIKSITE}]</key>
+                            <delay>0</delay>
+                            <units>days</units>
+                            <applications>
+                                <application>
+                                    <name>Rubrik</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Rubrik Statistics System Storage Available on {#RUBRIKSITE}</name>
+                            <type>TRAP</type>
+                            <key>rubrik.stats.system_storage.available[{#RUBRIKSITE}]</key>
+                            <delay>0</delay>
+                            <units>bytes</units>
+                            <applications>
+                                <application>
+                                    <name>Rubrik</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Rubrik Statistics System Storage Continuous Data Protection on {#RUBRIKSITE}</name>
+                            <type>TRAP</type>
+                            <key>rubrik.stats.system_storage.cdp[{#RUBRIKSITE}]</key>
+                            <delay>0</delay>
+                            <units>bytes</units>
+                            <applications>
+                                <application>
+                                    <name>Rubrik</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Rubrik Statistics System Storage Last Update Time on {#RUBRIKSITE}</name>
+                            <type>TRAP</type>
+                            <key>rubrik.stats.system_storage.lastUpdateTime[{#RUBRIKSITE}]</key>
+                            <delay>0</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Rubrik</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Rubrik Statistics System Storage LiveMount on {#RUBRIKSITE}</name>
+                            <type>TRAP</type>
+                            <key>rubrik.stats.system_storage.liveMount[{#RUBRIKSITE}]</key>
+                            <delay>0</delay>
+                            <units>bytes</units>
+                            <applications>
+                                <application>
+                                    <name>Rubrik</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Rubrik Statistics System Storage Miscellaneous on {#RUBRIKSITE}</name>
+                            <type>TRAP</type>
+                            <key>rubrik.stats.system_storage.miscellaneous[{#RUBRIKSITE}]</key>
+                            <delay>0</delay>
+                            <units>bytes</units>
+                            <applications>
+                                <application>
+                                    <name>Rubrik</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Rubrik Statistics System Storage Pending Snapshot on {#RUBRIKSITE}</name>
+                            <type>TRAP</type>
+                            <key>rubrik.stats.system_storage.pendingSnapshot[{#RUBRIKSITE}]</key>
+                            <delay>0</delay>
+                            <units>bytes</units>
+                            <applications>
+                                <application>
+                                    <name>Rubrik</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Rubrik Statistics System Storage Snapshot on {#RUBRIKSITE}</name>
+                            <type>TRAP</type>
+                            <key>rubrik.stats.system_storage.snapshot[{#RUBRIKSITE}]</key>
+                            <delay>0</delay>
+                            <units>bytes</units>
+                            <applications>
+                                <application>
+                                    <name>Rubrik</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Rubrik Statistics System Storage Total on {#RUBRIKSITE}</name>
+                            <type>TRAP</type>
+                            <key>rubrik.stats.system_storage.total[{#RUBRIKSITE}]</key>
+                            <delay>0</delay>
+                            <units>bytes</units>
+                            <applications>
+                                <application>
+                                    <name>Rubrik</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Rubrik Statistics System Storage Used on {#RUBRIKSITE}</name>
+                            <type>TRAP</type>
+                            <key>rubrik.stats.system_storage.used[{#RUBRIKSITE}]</key>
+                            <delay>0</delay>
+                            <units>bytes</units>
+                            <applications>
+                                <application>
+                                    <name>Rubrik</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Rubrik Trigger on {#RUBRIKSITE}</name>
+                            <key>rubrik.trigger.site[{#RUBRIKSITE}]</key>
+                            <delay>5m</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Rubrik</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>Rubrik Statistics System Storage Details on {#RUBRIKSITE}</name>
+                            <type>STACKED</type>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <color>BA68C8</color>
+                                    <item>
+                                        <host>Template Appliance Rubrik</host>
+                                        <key>rubrik.stats.system_storage.cdp[{#RUBRIKSITE}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <color>F63100</color>
+                                    <item>
+                                        <host>Template Appliance Rubrik</host>
+                                        <key>rubrik.stats.system_storage.liveMount[{#RUBRIKSITE}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>3</sortorder>
+                                    <color>006064</color>
+                                    <item>
+                                        <host>Template Appliance Rubrik</host>
+                                        <key>rubrik.stats.system_storage.miscellaneous[{#RUBRIKSITE}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>4</sortorder>
+                                    <color>F7941D</color>
+                                    <item>
+                                        <host>Template Appliance Rubrik</host>
+                                        <key>rubrik.stats.system_storage.pendingSnapshot[{#RUBRIKSITE}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>5</sortorder>
+                                    <color>1565C0</color>
+                                    <item>
+                                        <host>Template Appliance Rubrik</host>
+                                        <key>rubrik.stats.system_storage.snapshot[{#RUBRIKSITE}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>6</sortorder>
+                                    <color>8BC34A</color>
+                                    <item>
+                                        <host>Template Appliance Rubrik</host>
+                                        <key>rubrik.stats.system_storage.available[{#RUBRIKSITE}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Rubrik Statistics System Storage on {#RUBRIKSITE}</name>
+                            <type>STACKED</type>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <color>0D47A1</color>
+                                    <item>
+                                        <host>Template Appliance Rubrik</host>
+                                        <key>rubrik.stats.system_storage.used[{#RUBRIKSITE}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <color>8BC34A</color>
+                                    <item>
+                                        <host>Template Appliance Rubrik</host>
+                                        <key>rubrik.stats.system_storage.available[{#RUBRIKSITE}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+        </template>
+    </templates>
+</zabbix_export>

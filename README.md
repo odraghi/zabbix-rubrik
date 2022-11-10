@@ -1,4 +1,7 @@
-# Export Rubrik stats to Zabbix
+# Zabbix - Rubrik 
+![GitHub](https://img.shields.io/github/license/odraghi/zabbix-rubrik?style=flat-square)
+
+Export Rubrik stats to Zabbix
 
 ## How it works
 
